@@ -1,6 +1,6 @@
 settings.charset.max_string_length := 4096
 set("decoder.ffmpeg.video_disable", true)
-radio_playlist = playlist(mode="normal", reload_mode="watch", "/home/music")
+radio_playlist = playlist(mode="normal", reload_mode="watch", "/home/music/*.mp3")
 crossfaded = crossfade(fade_in=5.0, fade_out=5.0, radio_playlist)
 crossfaded = amplify(0.5, crossfaded)
 radio = fallback(track_sensitive = false, [crossfaded, blank()])
