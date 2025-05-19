@@ -2,8 +2,12 @@ set("charset.encoding", "UTF-8")
 settings.charset.max_string_length := 4096
 set("decoder.ffmpeg.video_disable", true)
 
+def smart_crossfade(source, fade_in, fade_out)
+  crossfade(fade_in=fade_in, fade_out=fade_out, source)
+end
+
 radio_playlist = playlist(mode="normal", reload_mode="watch", "/home/music")
-crossfaded = crossfade(fade_in=5.0, fade_out=5.0, radio_playlist)
+crossfaded = smart_crossfade(radio_playlist, 5.0, 5.0)
 crossfaded = amplify(0.5, crossfaded)
 radio = fallback(track_sensitive = false, [crossfaded, blank()])
 
