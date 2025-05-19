@@ -14,7 +14,9 @@
 │           ├── icon-512.png
 │           ├── intro.mp3
 │           ├── screenshot-mobile.png
-│           └── screenshot-desktop.png
+│           ├── screenshot-desktop.png
+│           ├── ROARRadio-logo.png
+│           └── favicon.ico
 ```
 
 ```
